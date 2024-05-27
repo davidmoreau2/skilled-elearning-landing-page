@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+:root {
+  --purple: #666ca3;
+  --blue: #13183f;
+  --gray: #83869a;
+  --dark-pink: #f74780;
+  --light-pink: #ffa7c3;
+  --white: #ffffff;
+  --orangeish: linear-gradient(#ff6f48, #f02aa6);
+  --blueish: linear-gradient(#4851ff, #f02aa6);
+  --grayish: linear-gradient(#fff, #d8d8e7);
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 1440px;
+  margin: auto;
+}
+
+.page {
+  overflow: hidden;
+  background: var(--grayish);
+}
+
+.xlheading {
+  font-size: 56px;
+  line-height: 70px;
+  font-weight: bolder;
+  color: var(--blue);
+}
+
+.lheading {
+  font-size: 40px;
+  line-height: 51px;
+  font-weight: bolder;
+  color: var(--blue);
+}
+
+.mheading {
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: bolder;
+  color: var(--blue);
+}
+
+.sheading {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: bolder;
+  color: var(--blue);
+}
+
+.mbody {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.sbody {
+  font-size: 16px;
+  line-height: 28px;
+  color: var(--gray);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 165px;
+  align-items: center;
+  z-index: 10;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  z-index: -1;
+}
+
+.button1 {
+  width: 165px;
+  height: 56px;
+  border-radius: 50px;
+  background-color: var(--blue);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.button2 {
+  width: 165px;
+  height: 56px;
+  border-radius: 50px;
+  background: var(--orangeish);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin-top: 45px;
+}
+
+.button3 {
+  width: 165px;
+  height: 56px;
+  border-radius: 50px;
+  background: var(--blueish);
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  margin-top: 45px;
+}
+
+.left-hero {
+  margin: auto;
+  transform: translate(165px, -150px);
+  max-width: 457px;
+}
+
+.right-hero img {
+  height: 940px;
+  width: 940px;
+  transform: translate(300px, -275px);
+  z-index: -1;
+}
+
+.boxes {
+  display: grid;
+  max-width: 1110px;
+  max-height: 748px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 30px;
+  margin: auto;
+  transform: translateY(-250px);
+}
+
+.box {
+  background: var(--orangeish);
+  height: 350px;
+  width: 350px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.box h1 {
+  transform: translateY(-65px);
+}
+
+.box h1 {
+  color: var(--white);
+  padding: 25px;
+}
+
+.boxinfo {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  position: relative;
+}
+
+.boxinfo img {
+  transform: translateY(-50px);
+}
+
+.boxinfo h1 {
+  position: absolute;
+  top: 35px;
+}
+
+.boxinfo a {
+  position: absolute;
+  bottom: 45px;
+  text-decoration: none;
+  color: var(--dark-pink);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.foot {
+  max-width: 100%;
+  height: 120px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 165px;
+  align-items: center;
+  background-color: var(--blue);
+  align-self: center;
+}
+
+.foot button {
+  transform: translateY(-25px);
+}
+
+.button1:hover {
+  cursor: pointer;
+  background: #666ca3;
+}
+
+.button2:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+.button3:hover {
+  cursor: pointer;
+  opacity: 70%;
+}
+
+@media (max-width: 768px) {
+  .page {
+    width: 768px;
+  }
+  .header {
+    padding: 20px 50px;
+    z-index: 10;
+    margin-bottom: 50px;
+  }
+  .left-hero {
+    min-width: 398px;
+    margin-left: 25px;
+  }
+
+  .xlheading {
+    font-size: 40px;
+    line-height: 51px;
+    padding: 0;
+    transform: translate(none);
+  }
+  .mbody {
+    font-size: 16px;
+  }
+
+  .right-hero img {
+    max-width: 640px;
+    max-height: 640px;
+    transform: translate(120px, -250px);
+  }
+  .boxes {
+    width: 668px;
+    height: 913px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .box {
+    width: 340px;
+    height: 260px;
+  }
+
+  .boxinfo {
+    width: 340px;
+    height: 260px;
+  }
+}
